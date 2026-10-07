@@ -1,139 +1,148 @@
-# 🏫 SchoolOS – School Management System
+🏫 SchoolOS – School Management System
 
-> Manage students, teachers, and grades through a simple and interactive school management system.
+A simple and interactive school management system built with Python, Streamlit, Object-Oriented Programming, and JSON-based data persistence.
 
-SchoolOS is a **School Management System** built using **Python, Streamlit, JSON, and Object-Oriented Programming (OOP)**. The application provides an interactive dashboard for managing students, teachers, and student grades.
-
-The project also includes a **console-based implementation** demonstrating important OOP concepts such as **Abstraction, Inheritance, Abstract Classes, and Static Methods**.
-
----
-
-## ✨ Features
-
-### 👨‍🎓 Student Management
-
-- 📝 Register new students
-- 👤 Store student name, age, email, and roll number
-- 🚫 Prevent duplicate roll numbers
-- 📧 Validate email addresses
-- 🔍 View complete student details
-- 📊 View student grades and average score
-
-### 👨‍🏫 Teacher Management
-
-- 📝 Register new teachers
-- 👤 Store teacher name, age, email, subject, and employee ID
-- 🚫 Prevent duplicate employee IDs
-- 📧 Validate email addresses
-- 🔍 View teacher details
-
-### 📚 Grade Management
-
-- 👨‍🎓 Select a registered student
-- ➕ Add grades for different subjects
-- 💯 Store marks between 0 and 100
-- 📊 Automatically calculate student average
-- 📋 Display subject-wise grades
-
-### 📊 Dashboard
-
-The dashboard provides:
-
-- 👨‍🎓 Total number of students
-- 👨‍🏫 Total number of teachers
-- 📝 Total grades recorded
-- 📈 School average
-- 👥 Recent students
-- 🧑‍🏫 Faculty information
-
-### 💾 Data Persistence
-
-All student, teacher, and grade records are stored in:
-
-```text
-school_data.json
-
-The application loads existing data when it starts and saves changes back to the JSON file.
-
+✨ Features
+👨‍🎓 Student Management
+Register new students
+Store student name, age, email, and roll number
+Prevent duplicate roll numbers
+Validate email addresses
+View student details
+View subject-wise grades
+Calculate average marks
+👨‍🏫 Teacher Management
+Register teachers
+Store teacher name, age, email, subject, and employee ID
+Prevent duplicate employee IDs
+Validate email addresses
+View teacher details
+📚 Grade Management
+Select registered students
+Add subject-wise marks
+Validate marks between 0–100
+Calculate student average
+Display subject-wise performance
+📊 Dashboard
+Total students
+Total teachers
+Total recorded grades
+Overall school average
+Recent students
+Faculty information
+💾 Data Persistence
+Stores data in a local JSON file
+Automatically loads existing data when the application starts
+Saves new students, teachers, and grades
+Data remains available even after restarting the application
+🖥️ Interactive Web Interface
+Built using Streamlit
+Sidebar navigation
+Custom UI styling
+Forms and validation
+Success and error messages
+Responsive layout
+🧱 Object-Oriented Programming
+Abstract classes
+Inheritance
+Abstraction
+Static methods
+Encapsulation of student and teacher operations
 📌 Overview
 
-SchoolOS provides a simple interface for managing basic school records.
+SchoolOS is a Python-based School Management System designed to manage basic school information in a simple and organized way.
 
-The application combines a Streamlit web interface with a JSON-based local data storage system.
+The application provides two interfaces:
 
-                 🏫 SchoolOS
-                      ↓
-              📊 Dashboard
-                      ↓
-        ┌─────────────┼─────────────┐
-        ↓             ↓             ↓
-   👨‍🎓 Students   👨‍🏫 Teachers   📚 Grades
-        ↓             ↓             ↓
-        └─────────────┼─────────────┘
-                      ↓
-             💾 school_data.json
-🔄 Application Workflow
-Start Application
-       ↓
-Load school_data.json
-       ↓
-Open SchoolOS Dashboard
-       ↓
-Select an Operation
-       ↓
-Register Student / Teacher
-       ↓
-Add Student Grades
-       ↓
-View Student / Teacher Details
-       ↓
-Calculate Statistics
-       ↓
-Save Data to JSON
-🌐 Streamlit Application
+🌐 Streamlit Web Application
+💻 Python Console Application
 
-The main web application is developed using Streamlit.
+The Streamlit application provides an interactive dashboard where users can register students, register teachers, add grades, and view academic information.
 
-The application provides the following navigation options:
+The console application demonstrates how the same management system can be implemented using Object-Oriented Programming concepts in Python.
 
-🏠 Dashboard
-👨‍🎓 Register Student
-👨‍🏫 Register Teacher
-📚 Add Grade
-🔍 Student Details
-🔍 Teacher Details
+The project uses a local school_data.json file for storing information, making the application persistent without requiring a separate database.
 
-The interface uses custom CSS to provide a clean and modern management-dashboard design.
+🎯 Project Objectives
 
-📊 Dashboard
+The main objectives of SchoolOS are:
 
-The dashboard provides an overview of the complete school data.
+To create a simple school management system using Python.
+To manage student and teacher information.
+To store and manage student grades.
+To calculate student and school-level averages.
+To demonstrate Object-Oriented Programming concepts.
+To implement data validation.
+To provide data persistence using JSON.
+To create an interactive web interface using Streamlit.
+To understand how Python applications can be connected with a user interface.
+🏗️ System Architecture
+                    ┌─────────────────────┐
+                    │       User          │
+                    └──────────┬──────────┘
+                               │
+                 ┌─────────────┴─────────────┐
+                 │                           │
+                 ▼                           ▼
+        ┌─────────────────┐        ┌─────────────────┐
+        │ Streamlit Web UI│        │ Console Program │
+        │     app.py      │        │     main.py     │
+        └────────┬────────┘        └────────┬────────┘
+                 │                          │
+                 └────────────┬─────────────┘
+                              ▼
+                    ┌──────────────────┐
+                    │  Data Validation │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Application Data │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ school_data.json │
+                    └──────────────────┘
+👨‍🎓 Student Management
 
-It displays:
+SchoolOS allows users to register and manage student information.
 
-👨‍🎓 Total Students
-👨‍🏫 Total Teachers
-📝 Total Grades Recorded
-📈 School Average
-👥 Recent Students
-🧑‍🏫 Faculty Information
+Student Registration
 
-The school average is calculated from the recorded student grades.
-
-👨‍🎓 Student Registration
-
-The student registration section collects:
+The registration form collects:
 
 👤 Full Name
 📧 Email Address
 🎂 Age
-🔢 Roll Number
+🆔 Roll Number
 
-The application validates the entered information and prevents duplicate roll numbers before registering a student.
+Before registering a student, the system checks:
 
-👨‍🏫 Teacher Registration
+Required fields are not empty.
+Email format is valid.
+Roll number is unique.
+Age is within the allowed range.
+Student Information
 
-The teacher registration section collects:
+Each student record contains:
+
+Name
+Age
+Email
+Roll Number
+Grades
+Average Marks
+
+Students can later be selected while adding grades.
+
+👨‍🏫 Teacher Management
+
+SchoolOS also provides a separate teacher management system.
+
+Teacher Registration
+
+The teacher registration form contains:
 
 👤 Full Name
 📧 Email Address
@@ -141,326 +150,616 @@ The teacher registration section collects:
 🎂 Age
 🆔 Employee ID
 
-The application validates the email address and prevents duplicate employee IDs.
+The system validates the entered information before saving it.
+
+Teacher Information
+
+Each teacher record contains:
+
+Name
+Age
+Email
+Subject
+Employee ID
+
+Duplicate employee IDs are not allowed.
 
 📚 Grade Management
 
-The Add Grade section allows users to add marks for registered students.
+SchoolOS provides a dedicated section for adding student grades.
 
-The user provides:
+The user can:
 
-👨‍🎓 Student
-📖 Subject
-💯 Marks
+Select a registered student.
+Enter the subject name.
+Enter marks.
+Validate marks.
+Save the grade.
 
-Marks are accepted between 0 and 100.
+Marks are restricted to:
 
-The system stores the grades and automatically calculates the student's average score.
+0 ≤ Marks ≤ 100
 
-🔍 Student Details
+The system stores grades subject-wise.
 
-The Student Details section allows users to select a registered student and view:
+Example
+Student: Ayush Kumar
 
-👤 Full Name
-🔢 Roll Number
-🎂 Age
-📧 Email
-📊 Average Score
-📚 Subject-wise Grades
+Python     : 90
+AI         : 85
+Mathematics: 80
 
-The average score is automatically calculated using the student's recorded grades.
+The system can then calculate the student's average marks.
 
-🔍 Teacher Details
+📊 Dashboard
 
-The Teacher Details section displays:
+The SchoolOS dashboard provides a quick overview of the school's data.
 
-👤 Full Name
-🆔 Employee ID
-🎂 Age
-📚 Subject
-📧 Email
+Dashboard Statistics
+┌──────────────────┐
+│ Total Students   │
+├──────────────────┤
+│ Total Teachers   │
+├──────────────────┤
+│ Total Grades     │
+├──────────────────┤
+│ School Average   │
+└──────────────────┘
 
-for the selected teacher.
+The dashboard also displays:
 
-🧩 Object-Oriented Programming
+📌 Recently registered students
+👨‍🏫 Teacher/faculty information
+📈 Overall academic performance
+📊 School statistics
 
-The console implementation demonstrates important OOP concepts.
+The school average is calculated using the recorded student grades.
 
-1. Abstract Class
+💾 Data Persistence
 
-Persons is an abstract base class containing common methods for students and teachers.
+SchoolOS uses a lightweight JSON-based data persistence system to store student, teacher, and grade information.
+
+All application data is stored locally in:
+
+school_data.json
+
+The application automatically loads existing data when it starts and saves updated data whenever a new student, teacher, or grade is added.
+
+🔄 Data Flow
+User Input
+    ↓
+Streamlit / Console Application
+    ↓
+Validate Data
+    ↓
+Update Application Data
+    ↓
+Save to school_data.json
+    ↓
+Data Persists After Application Restart
+📄 Stored Data
+
+The JSON file maintains information such as:
+
+👨‍🎓 Student Data
+Name
+Age
+Email
+Roll Number
+Subject-wise Grades
+Average Score
+👨‍🏫 Teacher Data
+Name
+Age
+Email
+Subject
+Employee ID
+🗂️ Example JSON Structure
+{
+  "students": [
+    {
+      "name": "Ayush Kumar",
+      "age": 20,
+      "email": "ayush@example.com",
+      "roll_no": "101",
+      "grades": {
+        "Python": 90,
+        "AI": 85
+      }
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Rahul Sharma",
+      "age": 35,
+      "email": "rahul@example.com",
+      "subject": "Python",
+      "employee_id": "T101"
+    }
+  ]
+}
+🔁 Persistence Process
+Application starts → existing data is loaded from school_data.json.
+User registers a student or teacher → input is validated.
+User adds a grade → marks are validated between 0–100.
+Data is updated → new information is added to the existing records.
+JSON file is saved → changes are permanently stored locally.
+Application restarts → previously saved data is loaded again.
+
+This allows SchoolOS to maintain data between different application sessions without requiring a separate database system.
+
+Note: JSON is suitable for learning and local applications. A production-level system could use MySQL, PostgreSQL, MongoDB, or another database system.
+
+🧱 Object-Oriented Programming
+
+One of the main purposes of SchoolOS is to demonstrate important Object-Oriented Programming concepts in Python.
+
+1. 🔹 Abstract Class
+
+The project uses an abstract base class:
 
 class Persons(ABC):
 
-It defines methods such as:
+The class defines common methods that can be implemented by different types of people in the system.
+
+Methods include:
 
 get_roles()
 register()
 show_details()
-2. Inheritance
+2. 🔹 Inheritance
 
-Student and Teacher inherit from the Persons class.
+Student and Teacher classes inherit from the common Persons class.
 
-class Student(Persons):
-class Teacher(Persons):
-3. Abstraction
+             Persons
+                │
+        ┌───────┴───────┐
+        │               │
+     Student          Teacher
 
-Common operations are defined in the parent class while student- and teacher-specific implementations are provided in their respective classes.
+This reduces code duplication and allows common functionality to be shared.
 
-4. Static Method
+3. 🔹 Abstraction
 
-Email validation is implemented using a static method:
+Abstraction is used to define common behavior without exposing unnecessary implementation details.
 
-@staticmethod
-def validate_email(email):
-5. Structured Data
+The abstract Persons class provides a common structure for students and teachers.
 
-Student and teacher information is maintained using structured dictionaries and stored in the JSON database.
+4. 🔹 Static Method
 
-💻 Console Version
+The project uses a static method for email validation:
 
-main.py provides a command-line version of the SchoolOS system.
+validate_email(email)
 
-The console menu supports:
+This method can validate an email without requiring an object instance.
 
-1️⃣ Register a student
-2️⃣ Register a teacher
-3️⃣ Add grades
-4️⃣ Show student details
-5️⃣ Show teacher details
+5. 🔹 Structured Data
 
-The console version demonstrates the implementation of OOP concepts along with JSON-based data storage.
+Student and teacher information is organized using Python dictionaries and stored in JSON format.
 
-💾 Data Storage
+This makes the data:
 
-SchoolOS uses JSON as a lightweight local database.
+Easy to understand
+Easy to update
+Easy to save
+Easy to load
+🌐 Streamlit Web Application
 
-school_data.json
+The main web application is developed using Streamlit.
 
-The file stores:
+The sidebar provides navigation between different sections.
 
-👨‍🎓 Student information
-👨‍🏫 Teacher information
-📚 Student grades
+Navigation
+🏠 Dashboard
 
-Example structure:
+👨‍🎓 Register Student
 
-{
-    "students": [
-        {
-            "name": "Student Name",
-            "age": 19,
-            "email": "student@example.com",
-            "roll_no": "101",
-            "grades": {
-                "Math": 75
-            }
-        }
-    ],
-    "teachers": [
-        {
-            "name": "Teacher Name",
-            "age": 35,
-            "email": "teacher@example.com",
-            "subject": "Computer",
-            "emp_id": "1"
-        }
-    ]
-}
+👨‍🏫 Register Teacher
+
+📚 Add Grade
+
+🎓 Student Details
+
+👨‍🏫 Teacher Details
+
+This makes the application easy to navigate and use.
+
+📝 Student Registration Workflow
+Open Register Student
+        ↓
+Enter Student Information
+        ↓
+Validate Required Fields
+        ↓
+Validate Email
+        ↓
+Check Duplicate Roll Number
+        ↓
+Register Student
+        ↓
+Save Data to JSON
+        ↓
+Display Success Message
+📝 Teacher Registration Workflow
+Open Register Teacher
+        ↓
+Enter Teacher Information
+        ↓
+Validate Required Fields
+        ↓
+Validate Email
+        ↓
+Check Duplicate Employee ID
+        ↓
+Register Teacher
+        ↓
+Save Data to JSON
+        ↓
+Display Success Message
+📚 Grade Addition Workflow
+Select Student
+      ↓
+Enter Subject
+      ↓
+Enter Marks
+      ↓
+Validate Marks (0–100)
+      ↓
+Add Grade
+      ↓
+Calculate Average
+      ↓
+Save Data
+🎓 Student Details
+
+The Student Details section displays information about a selected student.
+
+It can show:
+
+Student Name
+Roll Number
+Age
+Email
+Average Marks
+Subject-wise Grades
+Example
+Student: Ayush Kumar
+Roll No: 101
+Age: 20
+Email: ayush@example.com
+
+Grades
+----------------------
+Python       90
+AI           85
+Mathematics  80
+----------------------
+Average      85.0
+👨‍🏫 Teacher Details
+
+The Teacher Details section displays information about registered teachers.
+
+Example:
+
+Teacher Name : Rahul Sharma
+Employee ID  : T101
+Age          : 35
+Subject      : Python
+Email        : rahul@example.com
+🛡️ Data Validation
+
+SchoolOS contains multiple validation checks to maintain clean and valid data.
+
+Validation	Description
+Required Fields	Prevents empty mandatory fields
+Email Validation	Checks basic email format
+Roll Number	Prevents duplicate student roll numbers
+Employee ID	Prevents duplicate teacher IDs
+Student Age	Validates student age
+Teacher Age	Validates teacher age
+Marks	Allows marks only from 0–100
+Student Age
+
+The web interface validates student age between:
+
+5 – 30 years
+Teacher Age
+
+Teacher age is validated between:
+
+21 – 70 years
+Marks
+
+Marks must be:
+
+0 – 100
+🎨 User Interface
+
+The Streamlit application includes custom styling to provide a clean and modern interface.
+
+UI Elements
+🌑 Dark sidebar
+✨ Custom typography
+📊 Statistics cards
+👨‍🎓 Student cards
+👨‍🏫 Teacher cards
+📝 Styled forms
+📈 Grade indicators
+✅ Success messages
+❌ Error messages
+📱 Responsive column layout
+📸 Application Preview
+
+Add your application screenshot here:
+
+<p align="center">
+  <img src="demo.png" width="900">
+</p>
 🛠️ Tech Stack
 Technology	Purpose
 🐍 Python	Core programming language
-🌐 Streamlit	Interactive web application
-🗃️ JSON	Local data storage
-🧩 OOP	Application structure and programming concepts
-🎨 HTML/CSS	Custom user interface styling
+🎨 Streamlit	Web application and UI
+🗂️ JSON	Local data storage
+🧱 OOP	Application architecture
+🔤 HTML/CSS	Custom UI styling
+💻 Git	Version control
+🐙 GitHub	Source code hosting
+📊 Data Storage
+
+The project uses a local JSON file instead of a traditional database.
+
+school_data.json
+Why JSON?
+
+JSON was selected because it is:
+
+Simple
+Lightweight
+Human-readable
+Easy to modify
+Easy to load using Python
+Suitable for a small educational project
+
+For a larger production system, the application can be migrated to a proper database.
+
 📁 Project Structure
 SchoolOS/
 │
 ├── app.py
+│   └── Streamlit web application
+│
 ├── main.py
+│   └── Console-based OOP implementation
+│
 ├── school_data.json
+│   └── Student, teacher and grade data
+│
 ├── demo.png
+│   └── Application screenshot
+│
 └── README.md
-📄 File Description
-File	Purpose
-app.py	Main Streamlit web application
-main.py	Console-based OOP implementation
-school_data.json	Local JSON database
-demo.png	Application screenshot
-README.md	Project documentation
-📸 Application Preview
-<p align="center"> <img src="demo.png" alt="SchoolOS Dashboard" width="900"> </p>
+    └── Project documentation
+💻 Console Application
 
-The application provides a clean dashboard for managing students, teachers, and grades.
+Along with the Streamlit interface, SchoolOS also contains a console-based implementation in main.py.
+
+The console application provides a menu-driven system.
+
+Main Menu
+1. Register a student
+2. Register a teacher
+3. Add grades
+4. Show student details
+5. Show teacher details
+
+This implementation demonstrates how the application's functionality can be handled using Python classes and Object-Oriented Programming.
 
 🚀 Installation & Setup
-Prerequisites
+📋 Prerequisites
 
-Make sure you have:
+Make sure Python is installed on your system.
 
-🐍 Python 3.x
-📦 pip
-🐙 Git
-1. Clone the Repository
-git clone https://github.com/your-username/SchoolOS.git
-2. Navigate to the Project
+Check Python version:
+
+python --version
+1️⃣ Clone the Repository
+git clone https://github.com/ayush-kumar06/SchoolOS.git
+
+Move into the project directory:
+
 cd SchoolOS
-3. Install Dependencies
+2️⃣ Install Dependencies
 
 Install Streamlit:
 
 pip install streamlit
-▶️ Run the Web Application
 
-Start the Streamlit application:
+If your project contains a requirements file, you can also use:
+
+pip install -r requirements.txt
+3️⃣ Run the Streamlit Application
+
+Run:
 
 python -m streamlit run app.py
 
-Streamlit will provide a local URL in the terminal.
+The application will open in your browser.
 
-Usually:
+▶️ Usage
 
-http://localhost:8501
+After launching the application:
 
-Open the URL in your browser.
+Step 1 — Open Dashboard
 
-💻 Run the Console Application
+View:
 
-To run the console-based OOP implementation:
+Total students
+Total teachers
+Total grades
+School average
+Recent students
+Faculty information
+Step 2 — Register Student
 
-python main.py
+Enter the required student information and register the student.
 
-Then select an option from the displayed menu.
+Step 3 — Register Teacher
 
-🎯 How to Use
-👨‍🎓 Register a Student
-Open Register Student
-Enter the student's name
-Enter email address
-Enter age
-Enter roll number
-Click the registration button
-👨‍🏫 Register a Teacher
-Open Register Teacher
-Enter teacher information
-Enter subject
-Enter employee ID
-Submit the form
-📚 Add a Grade
-Open Add Grade
-Select a student
-Enter the subject
-Enter marks
-Save the grade
-🔍 View Details
+Enter teacher information and create a teacher record.
 
-Use:
+Step 4 — Add Grade
 
-Student Details
-Teacher Details
+Select a student and add marks for a particular subject.
 
-to view stored information.
+Step 5 — View Details
 
-✅ Validation
+Open Student Details or Teacher Details to view stored information.
 
-The project includes basic input validation:
+Step 6 — Restart Application
 
-⚠️ Required fields cannot be empty
-📧 Email must contain @ and .
-🔢 Student roll numbers must be unique
-🆔 Teacher employee IDs must be unique
-🎂 Student age is limited to 5–30 in the web interface
-🎂 Teacher age is limited to 21–70 in the web interface
-💯 Marks are limited to 0–100
-🎨 User Interface
+Close and restart the application.
 
-The Streamlit application uses custom CSS to provide:
+Previously saved information will still be available because the data is stored in:
 
-🌑 Dark sidebar
-✨ Clean typography
-📊 Statistics cards
-👨‍🎓 Student cards
-👨‍🏫 Teacher cards
-📝 Form styling
-🏷️ Grade indicators
-✅ Success and error messages
-📱 Responsive layout
-📚 Core Concepts
+school_data.json
+🔄 Complete Application Workflow
+                ┌──────────────┐
+                │    Start     │
+                └──────┬───────┘
+                       ↓
+             ┌───────────────────┐
+             │ Load JSON Data    │
+             └─────────┬─────────┘
+                       ↓
+             ┌───────────────────┐
+             │     Dashboard     │
+             └─────────┬─────────┘
+                       ↓
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+   Register       Register        Add Grade
+    Student        Teacher            │
+        │              │              │
+        └──────────────┼──────────────┘
+                       ↓
+                Validate Data
+                       ↓
+                 Update Records
+                       ↓
+              Save school_data.json
+                       ↓
+                View Information
+🧠 Core Concepts Used
 
-This project demonstrates practical implementation of:
+This project helped implement and understand several Python concepts:
 
-🐍 Python Programming
-🌐 Streamlit
-🧩 Object-Oriented Programming
-📦 Abstract Classes
-🔗 Inheritance
-⚙️ Static Methods
-🗃️ JSON File Handling
-🔄 CRUD-style Data Management
-✅ Form Validation
-💾 Data Persistence
-🎨 UI Design
-🔮 Future Improvements
+Python
+Variables
+Functions
+Lists
+Dictionaries
+Loops
+Conditional statements
+Exception handling
+File handling
+JSON handling
+Object-Oriented Programming
+Classes
+Objects
+Inheritance
+Abstraction
+Abstract classes
+Static methods
+Streamlit
+Sidebar navigation
+Forms
+Buttons
+Select boxes
+Input fields
+Columns
+Metrics
+Success/error messages
+Custom HTML/CSS
+Data Management
+JSON serialization
+JSON deserialization
+Data validation
+Persistent local storage
+CRUD-style operations
+📈 Future Improvements
 
-Possible improvements for future versions:
+The current version focuses on core school management functionality. The system can be extended with:
 
 🔐 Admin login and authentication
+👥 Role-based access control
 📅 Student attendance management
-🔎 Search and filter functionality
-✏️ Edit and delete records
+🔎 Student and teacher search
+🔍 Advanced filtering
+✏️ Edit existing records
+🗑️ Delete records
 🏫 Class and section management
 📊 Attendance reports
 📄 PDF report generation
-🗄️ Database integration
-👥 Role-based access control
-🕐 Teacher timetable management
-📈 Student performance charts
+🗄️ MySQL/PostgreSQL database
+👨‍🏫 Teacher timetable management
+📈 Advanced performance charts
 ☁️ Cloud deployment
-💾 Backup and restore functionality
+💾 Database backup and restore
+📱 Improved mobile interface
 🎓 Learning Outcomes
 
-Through this project, I practiced:
+Through this project, I learned and practiced:
 
 🐍 Python programming
-🌐 Streamlit application development
-🗃️ JSON file handling
-🧩 Object-Oriented Programming
-📦 Abstract classes
-🔗 Inheritance
-⚙️ Static methods
-✅ Form validation
-🎨 Dynamic UI development
+🧱 Object-Oriented Programming
+🔗 Inheritance and abstraction
+📦 Working with JSON data
 💾 Data persistence
-🔗 Git and GitHub
+🎨 Streamlit application development
+📝 Form handling
+🛡️ Input validation
+📊 Data presentation
+🔄 CRUD-style application logic
+🌐 Building interactive web applications
+🐙 Git and GitHub project management
 📌 Project Status
-
-🟢 Status: Completed / Functional
-
-The current version provides:
-
-👨‍🎓 Student registration
-👨‍🏫 Teacher registration
-📚 Grade management
-📊 Dashboard statistics
-🔍 Student details
-🔍 Teacher details
-💾 JSON-based data persistence
+✅ Project Completed
+✅ Student Management
+✅ Teacher Management
+✅ Grade Management
+✅ Dashboard
+✅ JSON Data Persistence
+✅ Data Validation
+✅ Streamlit UI
+✅ Console Application
 👨‍💻 Author
-
 Ayush Kumar
 
-🎓 B.Tech — Computer Science & Engineering (AI & ML)
+B.Tech CSE (AI & ML)
 
-🐙 GitHub: @ayush-kumar06
-💼 LinkedIn: Ayush Kumar
+<p> <a href="https://github.com/ayush-kumar06">🐙 GitHub</a> &nbsp; | &nbsp; <a href="https://www.linkedin.com/in/ayush-kumar-161380327">💼 LinkedIn</a> </p>
 🙏 Acknowledgements
-🌐 Streamlit — Web application framework
-🐍 Python — Core programming language
-🗃️ JSON — Local data storage
-🧩 Object-Oriented Programming — Application architecture
+
+This project was developed as a learning project to practice:
+
+Python
+Object-Oriented Programming
+Streamlit
+JSON data handling
+Data validation
+Web application development
+Git and GitHub
 ⭐ Support
 
-If you found this project useful, consider giving the repository a ⭐.
+If you found this project useful or interesting, consider giving the repository a ⭐ on GitHub.
 
-<p align="center"> Built with 🐍 Python • 🌐 Streamlit • 🧩 OOP • 💾 JSON </p>
+It helps support the project and encourages further development.
+
+<p align="center">
+🏫 SchoolOS
+
+Simple • Interactive • Persistent • Python Powered
+
+Made with ❤️ using Python & Streamlit
+
+</p>
