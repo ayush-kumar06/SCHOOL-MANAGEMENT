@@ -1,57 +1,67 @@
-🏫 SchoolOS – School Management System
+# 🏫 SchoolOS – School Management System
 
-SchoolOS is a simple School Management System built with Python. It provides a Streamlit-based web interface for managing students, teachers, and student grades.
+SchoolOS is a simple **School Management System** built with Python. It provides a **Streamlit-based web interface** for managing students, teachers, and student grades.
 
-The project also includes a Python console-based implementation demonstrating Object-Oriented Programming (OOP) concepts.
+The project also includes a **Python console-based implementation** demonstrating **Object-Oriented Programming (OOP)** concepts.
 
-✨ Features
-👨‍🎓 Student Management
-📝 Register a new student
-👤 Store student name, age, email, and roll number
-🚫 Prevent duplicate roll numbers
-📧 Validate email addresses
-🔍 View complete student details
-📊 View student grades and average score
-👨‍🏫 Teacher Management
-📝 Register a new teacher
-👤 Store teacher name, age, email, subject, and employee ID
-🚫 Prevent duplicate employee IDs
-📧 Validate email addresses
-🔍 View teacher details
-📚 Grade Management
-👨‍🎓 Select a registered student
-➕ Add marks for different subjects
-💯 Store marks between 0 and 100
-📊 Automatically calculate student average
-📋 Display subject-wise grades
-📊 Dashboard
+## ✨ Features
+
+### 👨‍🎓 Student Management
+
+- 📝 Register a new student
+- 👤 Store student name, age, email, and roll number
+- 🚫 Prevent duplicate roll numbers
+- 📧 Validate email addresses
+- 🔍 View complete student details
+- 📊 View student grades and average score
+
+### 👨‍🏫 Teacher Management
+
+- 📝 Register a new teacher
+- 👤 Store teacher name, age, email, subject, and employee ID
+- 🚫 Prevent duplicate employee IDs
+- 📧 Validate email addresses
+- 🔍 View teacher details
+
+### 📚 Grade Management
+
+- 👨‍🎓 Select a registered student
+- ➕ Add marks for different subjects
+- 💯 Store marks between 0 and 100
+- 📊 Automatically calculate student average
+- 📋 Display subject-wise grades
+
+### 📊 Dashboard
 
 The Streamlit dashboard displays:
 
-👨‍🎓 Total number of students
-👨‍🏫 Total number of teachers
-📝 Total grades recorded
-📈 School average
-👥 Recent students
-🧑‍🏫 Faculty/teacher information
-💾 Data Persistence
+- 👨‍🎓 Total number of students
+- 👨‍🏫 Total number of teachers
+- 📝 Total grades recorded
+- 📈 School average
+- 👥 Recent students
+- 🧑‍🏫 Faculty/teacher information
+
+### 💾 Data Persistence
 
 All records are stored in a local JSON file:
 
-school_data.json
+`school_data.json`
 
-The application loads the existing data when it starts and saves changes back to the JSON file.
+The application loads existing data when it starts and saves changes back to the JSON file.
 
-📁 Project Structure
+## 📁 Project Structure
+
+```text
 SchoolOS/
 │
-├── 📄 app.py
-├── 📄 main.py
-├── 🗃️ school_data.json
-├── 🖼️ demo.png
-└── 📖 README.md
+├── app.py
+├── main.py
+├── school_data.json
+├── demo.png
+└── README.md
 📋 File Description
-📄 File	🎯 Purpose
+File	Purpose
 app.py	Streamlit web application and user interface
 main.py	Console-based Python implementation using OOP
 school_data.json	Local JSON database containing students, teachers, and grades
@@ -94,7 +104,7 @@ Email validation is implemented as a static method:
 
 @staticmethod
 def validate_email(email):
-5️⃣ 📦 Structured Data
+5️⃣ Structured Data
 
 Student and teacher information is maintained in structured dictionaries and stored in the JSON database.
 
@@ -110,9 +120,6 @@ The application contains the following navigation options:
 📚 Add Grade
 🔍 Student Details
 🔍 Teacher Details
-
-The application uses a wide layout with an expanded sidebar for the management dashboard.
-
 📊 Dashboard
 
 The dashboard provides an overview of the school data.
