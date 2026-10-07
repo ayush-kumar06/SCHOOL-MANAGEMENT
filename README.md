@@ -1,11 +1,15 @@
 # 🏫 SchoolOS — School Management System
 
-A simple school management system built in Python 🐍. It lets you register students and teachers, record grades, and view details. It comes in two flavors:
+A school management system built in Python 🐍 to practice **Object-Oriented Programming (OOP)**. It lets you register students and teachers, record grades, and view details. It comes in two flavors:
 
 - 🌐 **Web app** (`app.py`): a Streamlit interface with a dashboard and a custom UI.
-- 💻 **Command-line app** (`main.py`): a menu-driven terminal version using OOP (abstract classes and inheritance).
+- 💻 **Command-line app** (`main.py`): a menu-driven terminal version built with OOP (abstract classes and inheritance).
 
 Both versions share the same JSON file (`school_data.json`) as their database 🗄️.
+
+## 📸 Screenshot
+
+![SchoolOS Dashboard](demo.png)
 
 ## ✨ Features
 
@@ -18,6 +22,15 @@ Both versions share the same JSON file (`school_data.json`) as their database �
 - ✅ Email validation and duplicate checks (roll number / employee ID)
 - 💾 Persistent storage in a JSON file
 
+## 🧠 OOP Concepts Used (main.py)
+
+| Concept | Where it is used |
+|---------|------------------|
+| 🎭 **Abstraction** | `Persons` is an abstract base class (`ABC`) with abstract methods `get_roles`, `register`, `show_details` |
+| 🧬 **Inheritance** | `Student` and `Teacher` extend `Persons` |
+| 🔄 **Polymorphism** | Each subclass implements its own `register` and `show_details` |
+| 🔧 **Static method** | `Persons.validate_email` is shared by all subclasses |
+
 ## 📁 Project Structure
 
 ```
@@ -25,6 +38,7 @@ Both versions share the same JSON file (`school_data.json`) as their database �
 ├── app.py              # 🌐 Streamlit web app (SchoolOS UI)
 ├── main.py             # 💻 Command-line version (OOP with ABC)
 ├── school_data.json    # 🗄️ JSON "database" (auto-updated)
+├── demo.png            # 📸 Dashboard preview
 └── README.md           # 📖 You are here
 ```
 
@@ -103,13 +117,6 @@ Choose an option:
 }
 ```
 
-## 🧠 OOP Concepts Used (main.py)
-
-- 🎭 **Abstraction**: `Persons` is an abstract base class (`ABC`) with abstract methods `get_roles`, `register`, `show_details`
-- 🧬 **Inheritance**: `Student` and `Teacher` extend `Persons`
-- 🔧 **Static method**: `Persons.validate_email`
-- 🔄 **Polymorphism**: each subclass implements its own `register` and `show_details`
-
 ## 🧰 Tech Stack
 
 - 🐍 Python
@@ -117,15 +124,12 @@ Choose an option:
 - 📄 JSON file storage
 - 🎨 Custom CSS (Syne and DM Sans fonts)
 
-## 🔮 Known Limitations / Future Ideas
-
-- ✏️ Edit and 🗑️ delete options for students and teachers
-- 📧 Stronger email validation (e.g., regex)
-- 🔐 Authentication and role-based access
-- 🗄️ Move from JSON to SQLite or another database
-- 🔎 Search, filter, and export (CSV/PDF) of reports
-- 🔁 The CLI runs a single action per launch; wrap it in a loop for continuous use
-
 ## 👤 Author
 
-Built as a learning project for Python OOP and Streamlit 💡
+**Ayush Kumar**
+🎓 Department of AI & ML
+
+- 🐙 GitHub: [ayush-kumar06](https://github.com/ayush-kumar06)
+- 💼 LinkedIn: [Ayush Kumar](https://www.linkedin.com/in/ayush-kumar-161380327)
+
+Built as a learning project for Python OOP concepts and Streamlit 💡
