@@ -1,0 +1,47 @@
+{
+    "students": [
+        {
+            "name": "\"Ayush Kumar\"",
+            "age": 19,
+            "email": "durganagar78@gmail.com",
+            "roll_no": "313",
+            "grades": {
+                "math": 75.0
+            }
+        },
+        {
+            "name": "\"Deewakar Kumar\"",
+            "age": 21,
+            "email": "deewakar@gmail.com",
+            "roll_no": "333",
+            "grades": {
+                "computer": 71.0
+            }
+        },
+        {
+            "name": "Ankit Kumar",
+            "age": 18,
+            "email": "ankit@gmail.com",
+            "roll_no": "226",
+            "grades": {
+                "English": 61.0
+            }
+        }
+    ],
+    "teachers": [
+        {
+            "name": "\"shubham kumar\"",
+            "age": 22,
+            "email": "shubbham@gmail.com",
+            "subject": "",
+            "emp_id": "\"math\""
+        },
+        {
+            "name": "Ashish Singh",
+            "age": 35,
+            "email": "ashish@gmail.com",
+            "subject": "computer",
+            "emp_id": "2"
+        }
+    ]
+}
